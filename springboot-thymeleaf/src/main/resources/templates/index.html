@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:th="http://www.thymeleaf.org"
+>
+<head>
+    <meta charset="UTF-8">
+    <title>王磊的博客</title>
+</head>
+<body>
+
+<span th:if="${age} > 18">
+    成年1
+</span>
+<span th:unless="${age > 18}">
+    未成年
+</span>
+
+<span th:text="|我叫${name}，是一名开发工程师。|"></span>
+
+<div th:switch="${age}">
+    <span th:case="18">18岁</span>
+    <span th:case="19">19岁</span>
+    <spa th:case="*">其他</spa>
+</div>
+
+
+</body>
+</html>
