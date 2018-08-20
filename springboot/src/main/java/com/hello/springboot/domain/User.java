@@ -1,4 +1,4 @@
-package com.hello.springboot.dao;
+package com.hello.springboot.domain;
 
 import javax.persistence.*;
 import java.io.Serializable;

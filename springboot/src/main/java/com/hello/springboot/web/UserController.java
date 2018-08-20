@@ -1,13 +1,11 @@
 package com.hello.springboot.web;
 
-import com.hello.springboot.dao.User;
-import com.hello.springboot.repository.UserRepository;
+import com.hello.springboot.domain.User;
+import com.hello.springboot.service.UserRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.servlet.ModelAndView;
-
-import javax.annotation.Resource;
 
 @Controller
 @RequestMapping("/")

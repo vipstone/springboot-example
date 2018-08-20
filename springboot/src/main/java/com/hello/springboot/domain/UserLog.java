@@ -1,11 +1,13 @@
-package com.hello.springboot.dao;
+package com.hello.springboot.domain;
 
-import javax.annotation.Generated;
+
 import javax.persistence.Column;
+import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.Id;
 import java.io.Serializable;
 
+@Entity
 public class UserLog implements Serializable {
 
     @Id
