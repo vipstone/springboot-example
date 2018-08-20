@@ -1,4 +1,5 @@
-# Spring Boot example
+## Spring Boot example
+
 Spring Boot learning example
 
 
@@ -11,3 +12,10 @@ Spring Boot learning example
 - Windows 10
 - IDEA 2018.2.1
 
+
+
+## 目录说明
+
+springboot 项目主文件目录
+
+springboot-thymeleaf Spring Boot 的thymeleaf实践
