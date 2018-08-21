@@ -183,7 +183,7 @@
 <#--<#assign timestamp=1534414202000>-->
 <#--${timestamp?number_to_datetime?string["yyyy/MM/dd HH:mm"]} <br />-->
 
-Data Size：${dataSize}
+data：${id}
 
 
 </body>

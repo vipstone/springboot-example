@@ -23,13 +23,14 @@ public class UserLog implements Serializable {
     @Column(nullable = false)
     private Long uid;
 
-    private int ctime;
+    @Column(unique = true)
+    private Long ctime;
 
-    public UserLog(){
+    public UserLog() {
 
     }
 
-    public UserLog(int type, String details, Long uid, int ctime) {
+    public UserLog(int type, String details, Long uid, Long ctime) {
         this.type = type;
         this.details = details;
         this.uid = uid;
@@ -68,11 +69,11 @@ public class UserLog implements Serializable {
         this.uid = uid;
     }
 
-    public int getCtime() {
+    public Long getCtime() {
         return ctime;
     }
 
-    public void setCtime(int ctime) {
+    public void setCtime(Long ctime) {
         this.ctime = ctime;
     }
 }
