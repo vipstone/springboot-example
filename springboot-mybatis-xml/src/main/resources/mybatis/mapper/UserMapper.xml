@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Config 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<!--namespace是命名空间，是mapper接口的全路径-->
+<mapper namespace="com.hello.springboot.mapper.UserMapper">
+
+    <!--resultMap – 是最复杂也是最强大的元素，用来描述如何从数据库结果集中来加载对象-->
+    <resultMap id="userResultMap" type="com.hello.springboot.entity.User">
+        <id property="name" column="username"></id>
+    </resultMap>
+
+    <!--sql – 可被其他语句引用的可重用语句块-->
+    <sql id="colums">
+        id,username,age,pwd
+    </sql>
+
+    <select id="findAll" resultMap="userResultMap">
+        select
+        <include refid="colums" />
+        from  user
+    </select>
+
+    <select id="findById" resultMap="userResultMap">
+        select
+        <include refid="colums" />
+        from  user
+        where  id=#{id}
+    </select>
+
+    <insert id="insert" parameterType="com.hello.springboot.entity.User" >
+       INSERT INTO
+       		user
+       		(username,age,pwd)
+       	VALUES
+       		(#{name}, #{age}, #{pwd})
+    </insert>
+
+    <update id="update" parameterType="com.hello.springboot.entity.User" >
+        UPDATE
+        users
+        SET
+        <if test="username != null">username = #{username},</if>
+        <if test="pwd != null">pwd = #{pwd},</if>
+        username = #{username}
+        WHERE
+        id = #{id}
+    </update>
+
+    <delete id="delete" parameterType="java.lang.Long" >
+       DELETE FROM
+       		 user
+       WHERE
+       		 id =#{id}
+    </delete>
+
+</mapper>
