@@ -2,7 +2,7 @@
 <!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Config 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
 
 <!--namespace是命名空间，是mapper接口的全路径-->
-<mapper namespace="com.hello.springboot.mapper.UserMapper">
+<mapper namespace="com.hello.springboot.dao.UserMapper">
 
     <!--resultMap – 是最复杂也是最强大的元素，用来描述如何从数据库结果集中来加载对象-->
     <resultMap id="userResultMap" type="com.hello.springboot.entity.User">

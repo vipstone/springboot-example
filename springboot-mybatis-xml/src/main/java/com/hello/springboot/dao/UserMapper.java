@@ -1,4 +1,4 @@
-package com.hello.springboot.mapper;
+package com.hello.springboot.dao;
 
 import com.hello.springboot.entity.User;
 

@@ -1,0 +1,152 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.hello.springboot.dao.ArticleMapper">
+  <resultMap id="BaseResultMap" type="com.hello.springboot.entity.Article">
+    <id column="id" jdbcType="BIGINT" property="id" />
+    <result column="title" jdbcType="VARCHAR" property="title" />
+    <result column="uid" jdbcType="BIGINT" property="uid" />
+    <result column="ctime" jdbcType="BIGINT" property="ctime" />
+    <result column="content" jdbcType="LONGVARCHAR" property="content" />
+  </resultMap>
+  <delete id="deleteByPrimaryKey" parameterType="java.lang.Long">
+    delete from article
+    where id = #{id,jdbcType=BIGINT}
+  </delete>
+  <insert id="insert" parameterType="com.hello.springboot.entity.Article">
+    <selectKey keyProperty="id" order="AFTER" resultType="java.lang.Long">
+      SELECT LAST_INSERT_ID()
+    </selectKey>
+    insert into article (title, `uid`, ctime, 
+      content)
+    values (#{title,jdbcType=VARCHAR}, #{uid,jdbcType=BIGINT}, #{ctime,jdbcType=BIGINT}, 
+      #{content,jdbcType=LONGVARCHAR})
+  </insert>
+  <update id="updateByPrimaryKey" parameterType="com.hello.springboot.entity.Article">
+    update article
+    set title = #{title,jdbcType=VARCHAR},
+      `uid` = #{uid,jdbcType=BIGINT},
+      ctime = #{ctime,jdbcType=BIGINT},
+      content = #{content,jdbcType=LONGVARCHAR}
+    where id = #{id,jdbcType=BIGINT}
+  </update>
+  <select id="selectByPrimaryKey" parameterType="java.lang.Long" resultMap="BaseResultMap">
+    select id, title, `uid`, ctime, content
+    from article
+    where id = #{id,jdbcType=BIGINT}
+  </select>
+  <select id="selectAll" resultMap="BaseResultMap">
+    select id, title, `uid`, ctime, content
+    from article
+  </select>
+  <resultMap id="BaseResultMap" type="com.hello.springboot.entity.Article">
+    <id column="id" jdbcType="BIGINT" property="id" />
+    <result column="title" jdbcType="VARCHAR" property="title" />
+    <result column="uid" jdbcType="BIGINT" property="uid" />
+    <result column="ctime" jdbcType="BIGINT" property="ctime" />
+    <result column="content" jdbcType="LONGVARCHAR" property="content" />
+  </resultMap>
+  <delete id="deleteByPrimaryKey" parameterType="java.lang.Long">
+    delete from article
+    where id = #{id,jdbcType=BIGINT}
+  </delete>
+  <insert id="insert" parameterType="com.hello.springboot.entity.Article">
+    <selectKey keyProperty="id" order="AFTER" resultType="java.lang.Long">
+      SELECT LAST_INSERT_ID()
+    </selectKey>
+    insert into article (title, `uid`, ctime, 
+      content)
+    values (#{title,jdbcType=VARCHAR}, #{uid,jdbcType=BIGINT}, #{ctime,jdbcType=BIGINT}, 
+      #{content,jdbcType=LONGVARCHAR})
+  </insert>
+  <update id="updateByPrimaryKey" parameterType="com.hello.springboot.entity.Article">
+    update article
+    set title = #{title,jdbcType=VARCHAR},
+      `uid` = #{uid,jdbcType=BIGINT},
+      ctime = #{ctime,jdbcType=BIGINT},
+      content = #{content,jdbcType=LONGVARCHAR}
+    where id = #{id,jdbcType=BIGINT}
+  </update>
+  <select id="selectByPrimaryKey" parameterType="java.lang.Long" resultMap="BaseResultMap">
+    select id, title, `uid`, ctime, content
+    from article
+    where id = #{id,jdbcType=BIGINT}
+  </select>
+  <select id="selectAll" resultMap="BaseResultMap">
+    select id, title, `uid`, ctime, content
+    from article
+  </select>
+  <resultMap id="BaseResultMap" type="com.hello.springboot.entity.Article">
+    <id column="id" jdbcType="BIGINT" property="id" />
+    <result column="title" jdbcType="VARCHAR" property="title" />
+    <result column="uid" jdbcType="BIGINT" property="uid" />
+    <result column="ctime" jdbcType="BIGINT" property="ctime" />
+    <result column="content" jdbcType="LONGVARCHAR" property="content" />
+  </resultMap>
+  <delete id="deleteByPrimaryKey" parameterType="java.lang.Long">
+    delete from article
+    where id = #{id,jdbcType=BIGINT}
+  </delete>
+  <insert id="insert" parameterType="com.hello.springboot.entity.Article">
+    <selectKey keyProperty="id" order="AFTER" resultType="java.lang.Long">
+      SELECT LAST_INSERT_ID()
+    </selectKey>
+    insert into article (title, `uid`, ctime, 
+      content)
+    values (#{title,jdbcType=VARCHAR}, #{uid,jdbcType=BIGINT}, #{ctime,jdbcType=BIGINT}, 
+      #{content,jdbcType=LONGVARCHAR})
+  </insert>
+  <update id="updateByPrimaryKey" parameterType="com.hello.springboot.entity.Article">
+    update article
+    set title = #{title,jdbcType=VARCHAR},
+      `uid` = #{uid,jdbcType=BIGINT},
+      ctime = #{ctime,jdbcType=BIGINT},
+      content = #{content,jdbcType=LONGVARCHAR}
+    where id = #{id,jdbcType=BIGINT}
+  </update>
+  <select id="selectByPrimaryKey" parameterType="java.lang.Long" resultMap="BaseResultMap">
+    select id, title, `uid`, ctime, content
+    from article
+    where id = #{id,jdbcType=BIGINT}
+  </select>
+  <select id="selectAll" resultMap="BaseResultMap">
+    select id, title, `uid`, ctime, content
+    from article
+  </select>
+  <resultMap id="BaseResultMap" type="com.hello.springboot.entity.Article">
+    <id column="id" jdbcType="BIGINT" property="id" />
+    <result column="title" jdbcType="VARCHAR" property="title" />
+    <result column="uid" jdbcType="BIGINT" property="uid" />
+    <result column="ctime" jdbcType="BIGINT" property="ctime" />
+    <result column="content" jdbcType="LONGVARCHAR" property="content" />
+  </resultMap>
+  <delete id="deleteByPrimaryKey" parameterType="java.lang.Long">
+    delete from article
+    where id = #{id,jdbcType=BIGINT}
+  </delete>
+  <insert id="insert" parameterType="com.hello.springboot.entity.Article">
+    <selectKey keyProperty="id" order="AFTER" resultType="java.lang.Long">
+      SELECT LAST_INSERT_ID()
+    </selectKey>
+    insert into article (title, `uid`, ctime, 
+      content)
+    values (#{title,jdbcType=VARCHAR}, #{uid,jdbcType=BIGINT}, #{ctime,jdbcType=BIGINT}, 
+      #{content,jdbcType=LONGVARCHAR})
+  </insert>
+  <update id="updateByPrimaryKey" parameterType="com.hello.springboot.entity.Article">
+    update article
+    set title = #{title,jdbcType=VARCHAR},
+      `uid` = #{uid,jdbcType=BIGINT},
+      ctime = #{ctime,jdbcType=BIGINT},
+      content = #{content,jdbcType=LONGVARCHAR}
+    where id = #{id,jdbcType=BIGINT}
+  </update>
+  <select id="selectByPrimaryKey" parameterType="java.lang.Long" resultMap="BaseResultMap">
+    select id, title, `uid`, ctime, content
+    from article
+    where id = #{id,jdbcType=BIGINT}
+  </select>
+  <select id="selectAll" resultMap="BaseResultMap">
+    select id, title, `uid`, ctime, content
+    from article
+  </select>
+</mapper>
