@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<configuration>
+    <Appenders>
+        <Console name="CONSOLE" target="SYSTEM_OUT">
+            <PatternLayout charset="UTF-8" pattern="[%-5p] %d %c - %m%n" />
+        </Console>
+
+        <File name="File" fileName="D:\\mylog.log">
+            <PatternLayout pattern="%m%n" />
+        </File>
+    </Appenders>
+
+    <Loggers>
+        <root level="info">
+            <AppenderRef ref="CONSOLE" />
+            <AppenderRef ref="File" />
+        </root>
+    </Loggers>
+</configuration>
