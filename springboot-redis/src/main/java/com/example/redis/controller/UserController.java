@@ -1,4 +1,4 @@
-package com.example.redis.Controller;
+package com.example.redis.controller;
 
 
 import org.springframework.beans.factory.annotation.Autowired;
@@ -6,6 +6,7 @@ import org.springframework.cache.annotation.CacheEvict;
 import org.springframework.cache.annotation.CachePut;
 import org.springframework.cache.annotation.Cacheable;
 import org.springframework.data.redis.core.StringRedisTemplate;
+import org.springframework.web.bind.annotation.Mapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
@@ -49,22 +50,26 @@ public class UserController {
         return "delete cache:" + new Date().getTime();
     }
 
-/**
- * 测试Session
- * @param session
- */
-@RequestMapping("/uid")
-public String testSession(HttpSession session) {
-    UUID uid = (UUID) session.getAttribute("uid");
-    System.out.println("uid:"+uid);
-    if (uid == null) {
-        uid = UUID.randomUUID();
+    /**
+     * 测试Session
+     * @param session
+     */
+    @RequestMapping("/uid")
+    public String testSession(HttpSession session) {
+        UUID uid = (UUID) session.getAttribute("uid");
+        System.out.println("uid:" + uid);
+        if (uid == null) {
+            uid = UUID.randomUUID();
+        }
+        session.setAttribute("uid", uid);
+        String sessionId = session.getId();
+        System.out.println("session:" + sessionId);
+        return sessionId;
     }
-    session.setAttribute("uid", uid);
-    String sessionId = session.getId();
-    System.out.println("session:"+sessionId);
-    return sessionId;
-}
 
+    @RequestMapping("name")
+    public String getName(){
+        return  "Adam";
+    }
 
 }

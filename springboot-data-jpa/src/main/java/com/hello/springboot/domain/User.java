@@ -9,7 +9,7 @@ public class User implements Serializable {
     @Id
     @GeneratedValue
     private Long id;
-    @Column(name = "name", nullable = false)
+    @Column(name = "username", nullable = false)
     private String name;
     @Column(nullable = false)
     private int age;
@@ -17,7 +17,7 @@ public class User implements Serializable {
     private String pwd;
 
     @Transient
-    private int ctime;
+    private Long ctime;
 
     public User() {
     }
@@ -60,11 +60,11 @@ public class User implements Serializable {
         this.pwd = pwd;
     }
 
-    public int getCtime() {
+    public Long getCtime() {
         return ctime;
     }
 
-    public void setCtime(int ctime) {
+    public void setCtime(Long ctime) {
         this.ctime = ctime;
     }
 }
