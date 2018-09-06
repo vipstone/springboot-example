@@ -26,6 +26,11 @@ public class UserController {
     @RequestMapping("/")
     @Cacheable(value = _CacheKey)
     public String doGet() {
+
+//        stringRedisTemplate.hasKey(_CacheKey);
+//        stringRedisTemplate.opsForValue().set(_CacheKey,"value");
+//        stringRedisTemplate.opsForValue().get(_CacheKey);
+
         System.out.println("没有出现这行代码，说明缓存已经生效。");
         return "cache:" + new Date().getTime();
     }
