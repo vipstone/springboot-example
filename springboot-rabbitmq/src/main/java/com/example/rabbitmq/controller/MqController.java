@@ -1,6 +1,7 @@
 package com.example.rabbitmq.controller;
 
 import com.example.rabbitmq.mq.FanoutSender;
+import com.example.rabbitmq.mq.delayed.DelayedSender;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
@@ -12,13 +13,25 @@ import java.util.Date;
 @RestController
 public class MqController {
 
+//    @Autowired
+//    private FanoutSender fanoutSender;
+//
+//    @RequestMapping("/s")
+//    public void send() {
+//        SimpleDateFormat sf = new SimpleDateFormat("yyyy-MM-dd");
+//        fanoutSender.send("Time1 => " + sf.format(new Date()));
+//        fanoutSender.send2("Date2 => " + sf.format(new Date()));
+//    }
+
+
     @Autowired
-    private FanoutSender fanoutSender;
+    private DelayedSender sender;
 
     @RequestMapping("/s")
+//    public void send() {
     public void send() {
         SimpleDateFormat sf = new SimpleDateFormat("yyyy-MM-dd");
-        fanoutSender.send("Time1 => " + sf.format(new Date()));
-        fanoutSender.send2("Date2 => " + sf.format(new Date()));
+        sender.send("Hi Admin.");
     }
+
 }
