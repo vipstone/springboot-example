@@ -6,17 +6,24 @@ Spring Boot 系列学习示例.
 
 ## 开发环境
 
-- Spring Boot 2.0.4
-- MySql 8.0.12
+- Spring Boot 2.x
+- MySql 8.x
+- Redis 4.x
+- MongoDB 4.x
+- RabbitMQ 3.7.x
 - JDK 1.8
-- IDEA 2018.2.1
+- IDEA 2018.2
 
 
 
-## 功能列表
+## 实现功能
 
-- Thymeleaf 模板集成 => 查看 springboot-thymeleaf
-- FreeMarker 模板集成 => 查看 springboot-data-jpa
-- Spring Data JPA  => 查看 springboot-data-jpa
-- MySQL 8 => 查看 springboot-data-jpa/springboot-mybatis
+- Thymeleaf 
+- FreeMarker 
+- Spring Data JPA  
+- Log4j2、JUnit
+- MyBatis
+- Redis
+- Swagger2
+- RabbitMQ（延迟队列）
 
